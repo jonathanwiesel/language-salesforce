@@ -1,0 +1,97 @@
+'fileTypes': [
+  'page'
+  'component'
+]
+'foldingStartMarker': '/\\*\\*|\\{\\s*$'
+'foldingStopMarker': '\\*\\*/|^\\s*\\}'
+'name': 'Visualforce'
+'patterns': [
+  {
+    'include': 'text.html.basic'
+    'name': 'source.html'
+  }
+  {
+    'begin': '"'
+    'end': '"'
+    'name': 'string.quoted.double.untitled'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.untitled'
+      }
+    ]
+  }
+  {
+    'begin': '\''
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.html'
+    'contentName': 'meta.toc-list.id.html'
+    'end': '\''
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.html'
+    'name': 'string.quoted.single.html'
+    'patterns': [
+      {
+        'include': '#embedded-code'
+      }
+      {
+        'include': '#entities'
+      }
+    ]
+  }
+]
+'repository':
+  'tag-id-attribute':
+    'begin': '\\b(id)\\b\\s*(=)'
+    'captures':
+      '1':
+        'name': 'entity.other.attribute-name.id.html'
+      '2':
+        'name': 'punctuation.separator.key-value.html'
+    'end': '(?<=\'|")'
+    'name': 'meta.attribute-with-value.id.html'
+    'patterns': [
+      {
+        'begin': '"'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.html'
+        'contentName': 'meta.toc-list.id.html'
+        'end': '"'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.html'
+        'name': 'string.quoted.double.html'
+        'patterns': [
+          {
+            'include': '#embedded-code'
+          }
+          {
+            'include': '#entities'
+          }
+        ]
+      }
+      {
+        'begin': '\''
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.html'
+        'contentName': 'meta.toc-list.id.html'
+        'end': '\''
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.html'
+        'name': 'string.quoted.single.html'
+        'patterns': [
+          {
+            'include': '#embedded-code'
+          }
+          {
+            'include': '#entities'
+          }
+        ]
+      }
+    ]
+'scopeName': 'source.visualforce'

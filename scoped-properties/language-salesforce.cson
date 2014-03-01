@@ -1,0 +1,7 @@
+'.source.apex':
+  'editor':
+    'commentStart': '// '
+'.source.visualforce':
+  'editor':
+    'commentStart': '<!-- '
+    'commentEnd': ' -->'

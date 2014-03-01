@@ -1,0 +1,105 @@
+'fileTypes': [
+  'apex'
+  'cls'
+  'trigger'
+  'tgr'
+]
+'foldingStartMarker': '/\\*\\*|\\{\\s*$'
+'foldingStopMarker': '\\*\\*/|^\\s*\\}'
+'name': 'Apex'
+'patterns': [
+  {
+    'match': '\\b(?i:package|trigger|class|interface)\\b'
+    'name': 'storage.type.apex'
+  }
+  {
+    'match': '\\b(?i:public|private|global|webservice|abstract|virtual|protected|static)\\b'
+    'name': 'keyword.control.scope.apex'
+  }
+  {
+    'match': '\\b(?i:istest|future|deprecrated|readonly|remoteaction)\\b'
+    'name': 'keyword.control.annotation.apex'
+  }
+  {
+    'match': '\\b(?i:commit|rollback)\\b'
+    'name': 'keyword.control.transaction.apex'
+  }
+  {
+    'match': '\\b(?i:insert|update|delete|upsert)\\b'
+    'name': 'keyword.control.dml.apex'
+  }
+  {
+    'match': '\\b(?i:try|catch|finally|throw)\\b'
+    'name': 'keyword.control.catch-exception.apex'
+  }
+  {
+    'match': '\\b(?i:null|system|apex|label|apexpages|userinfo|schema)\\b'
+    'name': 'keyword.control.system.apex'
+  }
+  {
+    'match': '\\b(?i:try|catch|finally|throw)\\b'
+    'name': 'keyword.control.catch-exception.apex'
+  }
+  {
+    'match': '\\b(?i:return|break|case|continue|default|do|while|for|switch|if|else)\\b'
+    'name': 'keyword.control.logic.apex'
+  }
+  {
+    'match': '\\=|\\!\\=|\\>|\\<|\\&\\&|\\|\\|\\+'
+    'name': 'keyword.control.evaluation.apex'
+  }
+  {
+    'include': '#support-type-built-ins-apex'
+  }
+  {
+    'begin': '\\['
+    'end': '\\]'
+    'name': 'string.quoted.brackets.soql.apex'
+  }
+  {
+    'begin': '\\(\''
+    'end': '\'\\)'
+    'name': 'string.quoted.parens.soql.apex'
+  }
+  {
+    'begin': '\\=\''
+    'end': '\'\\;'
+    'name': 'string.quoted.var1.soql.apex'
+  }
+  {
+    'begin': '\\{'
+    'end': '\\}'
+    'include': 'source.java'
+    'name': 'source.apex.java'
+  }
+  {
+    'begin': '\\= \''
+    'end': '\'\\;'
+    'name': 'string.quoted.var2.soql.apex'
+  }
+]
+'repository':
+  'strings':
+    'patterns': [
+      {
+        'begin': '\''
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.apex'
+        'end': '\''
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.apex'
+        'name': 'string.quoted.single.apex'
+        'patterns': [
+          {
+            'match': '\\\\.'
+            'name': 'constant.character.escape.apex'
+          }
+        ]
+      }
+    ]
+  'support-type-built-ins-apex':
+    'match': '\\b(?i:integer|string|void|double|boolean|date|datetime|id)\\b'
+    'name': 'support.type.built-ins.apex'
+'scopeName': 'source.apex'
