@@ -2,6 +2,9 @@
     'class':
         'prefix': 'cla'
         'body': 'public with sharing class ${1:className}{\n\n\tpublic ${2:className}(){\n\t\n\t\t${3://constructor code}\n\t}\n}'
+    'controller':
+        'prefix': 'con'
+        'body': 'public with sharing class ${1:className}_Controller{\n\tprivate final ${2:SObject} ${3:obj};\n\n\tpublic ${4:className}_Controller(ApexPages.StandardController stdCon){\n\t\tthis.${5:obj} = (${6:SObject})stdCon.getRecord();\n\t\t$7\n\t}\n}'
     'trigger':
         'prefix': 'tri'
         'body': 'trigger ${1:triggerName} on ${2:SObject} (${3:events}){\n\tfor(${4:SObject} ${5:obj} : Trigger.new){\n\t\t${6://bulkified code}\n\t}\n}'
