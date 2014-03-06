@@ -1,6 +1,7 @@
 '.source.apex':
   'editor':
     'commentStart': '// '
+    'foldEndPattern': '^\\s*(\\}|// \\}\\}\\}$)'
     'completions': [
         'AcceptedEventRelation'
         'Account'
