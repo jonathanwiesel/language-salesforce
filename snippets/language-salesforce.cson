@@ -1,13 +1,13 @@
 '.source.apex':
     'class':
         'prefix': 'cla'
-        'body': 'public with sharing class ${1:className}{\n\n\tpublic ${2:className}(){\n\t\n\t\t${3://constructor code}\n\t}\n}'
+        'body': 'public with sharing class ${1:className}{\n\n\tpublic ${1:className}(){\n\t\n\t\t${2://constructor code}\n\t}\n}'
     'controller':
         'prefix': 'con'
-        'body': 'public with sharing class ${1:className}_Controller{\n\tprivate final ${2:SObject} ${3:obj};\n\n\tpublic ${4:className}_Controller(ApexPages.StandardController stdCon){\n\t\tthis.${5:obj} = (${6:SObject})stdCon.getRecord();\n\t\t$7\n\t}\n}'
+        'body': 'public with sharing class ${1:className}_Controller{\n\tprivate final ${2:SObject} ${3:obj};\n\n\tpublic ${1:className}_Controller(ApexPages.StandardController stdCon){\n\t\tthis.${3:obj} = (${2:SObject})stdCon.getRecord();\n\t\t$4\n\t}\n}'
     'trigger':
         'prefix': 'tri'
-        'body': 'trigger ${1:triggerName} on ${2:SObject} (${3:events}){\n\tfor(${4:SObject} ${5:obj} : Trigger.new){\n\t\t${6://bulkified code}\n\t}\n}'
+        'body': 'trigger ${1:triggerName} on ${2:SObject} (${3:events}){\n\tfor(${2:SObject} ${4:obj} : Trigger.new){\n\t\t${5://bulkified code}\n\t}\n}'
     'test':
         'prefix': 'test'
         'body': '@isTest\npublic class Test_${1:classToTest}{\n\n\tstatic testMethod void test_${2:methodToTest}{\n\t\t$3\n\t} \n}'
@@ -28,10 +28,10 @@
         'body': 'System.assertNotEquals(${1:expected}, ${2:actual});'
     'new list':
         'prefix': 'newl'
-        'body': 'List<${1:SObject}> ${2:sObjectList} = new List<${3:SObject}>();'
+        'body': 'List<${1:SObject}> ${2:sObjectList} = new List<${1:SObject}>();'
     'new set':
         'prefix': 'news'
-        'body': 'Set<${1:SObject}> ${2:sObjectSet} = new Set<${3:SObject}>();'
+        'body': 'Set<${1:SObject}> ${2:sObjectSet} = new Set<${1:SObject}>();'
     'new map':
         'prefix': 'newm'
-        'body': 'Map<${1:Id}, ${2:SObject}> ${3:sObjectMap} = new Map<${4:Id}, ${5:SObject}>();'
+        'body': 'Map<${1:Id}, ${2:SObject}> ${3:sObjectMap} = new Map<${1:Id}, ${2:SObject}>();'
