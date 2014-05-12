@@ -11,3 +11,9 @@ Contributions are greatly appreciated. Please fork this repository and open a pu
 ### Update: 03/20/2014
 Great part of the Java grammar has been manually imported. Please feel free to clean the code removing unnecessary
 Java code and fixing any misbehavior or wrong highlighting.
+
+***
+
+## License 
+
+[http://jonathanwiesel.mit-license.org/](http://jonathanwiesel.mit-license.org/)
