@@ -10,37 +10,6 @@
     'include': 'text.html.basic'
     'name': 'source.html'
   }
-  {
-    'begin': '"'
-    'end': '"'
-    'name': 'string.quoted.double.untitled'
-    'patterns': [
-      {
-        'match': '\\\\.'
-        'name': 'constant.character.escape.untitled'
-      }
-    ]
-  }
-  {
-    'begin': '\''
-    'beginCaptures':
-      '0':
-        'name': 'punctuation.definition.string.begin.html'
-    'contentName': 'meta.toc-list.id.html'
-    'end': '\''
-    'endCaptures':
-      '0':
-        'name': 'punctuation.definition.string.end.html'
-    'name': 'string.quoted.single.html'
-    'patterns': [
-      {
-        'include': '#embedded-code'
-      }
-      {
-        'include': '#entities'
-      }
-    ]
-  }
 ]
 'repository':
   'tag-id-attribute':
