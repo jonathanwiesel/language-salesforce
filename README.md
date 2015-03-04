@@ -1,5 +1,7 @@
 # Salesforce languages support for Atom
 
+[![apmV]][apmUrl] [![apmDown]][apmUrl] 
+
 Add syntax highlighting and snippets to Apex and Visualforce files in Atom.
 
 Originally converted from the [ForceDotBundle TextMate bundle](https://github.com/joshbirk/ForceDotBundle) by joshbirk.
@@ -16,4 +18,9 @@ Java code and fixing any misbehavior or wrong highlighting.
 
 ## License 
 
-[http://jonathanwiesel.mit-license.org/](http://jonathanwiesel.mit-license.org/)
+[MIT License][MIT]
+
+[apmV]: https://img.shields.io/apm/v/language-salesforce.svg
+[apmDown]: https://img.shields.io/apm/dm/language-salesforce.svg
+[apmUrl]: https://atom.io/packages/language-salesforce
+[MIT]: http://jonathanwiesel.mit-license.org/](http://jonathanwiesel.mit-license.org/
